@@ -1,0 +1,514 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+/***Start Body*/
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.font-s {
+    font-size: 14px !important;
+}
+
+.font-m {
+    font-size: 18px !important;
+}
+
+.font-l {
+    font-size: 24px !important;
+}
+
+.font-xl {
+    font-size: 32px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif !important;
+    color: #282828 !important;
+}
+
+
+/**End Body**/
+
+#team p,
+#service p,
+#about p,
+#client p,
+#contact p {
+    font-size: 18px;
+    color: #999;
+}
+
+
+/******************************************/
+
+.full-home {
+    background-image: url(../images/slideshow-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.full-home .setting {
+    font-size: 24px;
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    padding: 10px 0px;
+    background: black;
+    z-index: 555;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: green;
+    z-index: 5555;
+}
+
+.scroll-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.scroll-btn a::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes scroll {
+    0% {
+        top: 1%;
+        opacity: 1;
+    }
+    10% {
+        top: 5%;
+        opacity: .8;
+    }
+    30% {
+        top: 10%;
+        opacity: .6;
+    }
+    50% {
+        top: 20%;
+        opacity: .4;
+    }
+    70% {
+        top: 30%;
+        opacity: .2;
+    }
+    90% {
+        top: 40%;
+        opacity: .1;
+    }
+    100% {
+        top: 1%;
+        opacity: 0;
+    }
+}
+
+.navbar-nav .nav-item .nav-link,
+.nav-icons a {
+    margin: 0px 10px;
+    color: #fff;
+    font-size: 14px;
+    transition: all .4s;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.nav-icons a:hover {
+    color: #f25454;
+}
+
+
+/*****************************************/
+
+
+/***** Start about Section ****/
+
+.progress {
+    height: .25rem;
+    animation: fillBar 2s;
+}
+
+.bar-style {
+    border-radius: 2px;
+    background-color: #f25454;
+}
+
+.skill-bar {
+    margin-bottom: 10px;
+}
+
+.skill-title {
+    position: relative;
+    padding: 5px 0px;
+}
+
+.bar-value {
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: showValue 1s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes fillBar {
+    0% {
+        width: 5%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes showValue {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/****  End about section   ****/
+
+.about-content p {
+    font-size: 15px !important;
+    color: #666 !important;
+}
+
+
+/**** End about Section ****/
+
+
+/******Start Team Section*****/
+
+.title-header h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #999;
+    opacity: .15;
+    position: absolute;
+}
+
+.title-header h2 {
+    font-size: 38px;
+    font-weight: 700;
+    padding: 25px 0px;
+    position: relative;
+}
+
+.title-header h2::after {
+    content: "";
+    width: 3rem;
+    height: 1.2px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .2s;
+}
+
+.title-header:hover h2::after {
+    width: 4rem;
+}
+
+.team-member {
+    margin: 15px 0px;
+}
+
+.team-member .member-overlay {
+    background-color: rgba(242, 84, 84, 0.85);
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.team-member:hover .member-overlay {
+    opacity: 1;
+}
+
+.team-member .member-overlay a {
+    padding: 0px 15px;
+    color: #fff;
+}
+
+.member-title h5 {
+    transition: color .4s;
+}
+
+.team-member:hover .member-title h5 {
+    color: rgb(242, 84, 84);
+}
+
+.team-member img {
+    transition: transform .4s;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+
+/******End Team Section******/
+
+#idea .idea-question h3 {
+    font-size: 64px;
+}
+
+.contact-btn a {
+    text-decoration-line: none;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(242, 84, 84);
+    transition: all .5s;
+}
+
+.contact-btn a:hover {
+    background-color: rgba(242, 84, 84, .6);
+}
+
+
+/******Start Service Section******/
+
+.service-icon,
+.contact-icon {
+    margin-right: 20px;
+    color: #f25454;
+}
+
+.service-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+.service-content h3 {
+    transition: color .3s;
+}
+
+.service-box:hover .service-content h3 {
+    color: #f25454 !important;
+}
+
+.service-box {
+    transition: all .6s;
+}
+
+.service-box:hover {
+    box-shadow: 0 3px 30px rgba(0, 0, 0, .25);
+}
+
+
+/******End Service Section******/
+
+
+/***** Start Client Section*****/
+
+#client .client-contnet p::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+    color: #666;
+    /* width: 200px;
+    height: 200px;
+    color: #f25454;
+    background-color: #09c;*/
+}
+
+#client .client-contnet p::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    color: #666;
+}
+
+#client .client-contnet p {
+    color: #666;
+    padding: 50px 50px;
+}
+
+.carousel-indicators li {
+    background-color: #f25454;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+
+/******* End Client Section*********/
+
+
+/****** Start Contact Section*******/
+
+.contact-body h3 {
+    transition: all .4s;
+}
+
+.contact-info:hover .contact-body h3 {
+    color: #f25454 !important;
+}
+
+.contact-icon i {
+    font-size: 32px;
+}
+
+.contact-body a {
+    text-decoration-line: none;
+    color: #666;
+    transition: all .5s;
+}
+
+.contact-body a:hover {
+    color: #f25454;
+}
+
+.contact-form .submit {
+    padding: 15px 30px;
+    background-color: #f25454;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 1s;
+}
+
+.contact-form .submit:hover {
+    background-color: rgba(242, 84, 84, 0.75);
+    color: black;
+}
+
+
+/****** End Contact Section*******/
+
+
+/**Start Footer***/
+
+#footer {
+    background-color: #1a1a1a;
+}
+
+#footer .social-icons a {
+    padding: 0px 10px;
+    color: #fff;
+    transition: color .5s;
+}
+
+#footer .social-icons a:hover {
+    color: #f25454;
+}
+
+#footer .footer-info {
+    background-image: url(../images/dotted-map.png);
+    background-size: cover;
+    background-position: center center;
+    border: .5px solid #282828;
+}
+
+#footer .home-btn a {
+    text-decoration-line: none;
+    padding: 16px 16px;
+    font-size: 1.3rem;
+    color: #fff;
+    opacity: .5;
+    background-color: #f25454;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+}
+
+#footer .layer {
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+#footer .home-btn a:hover {
+    background-color: #f25454;
+    opacity: 1;
+}
+
+#footer .info-box h5 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+#footer .info-box {
+    margin: 10px;
+}
+
+#footer .info-box a,
+p {
+    color: #b0b0b0;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration-line: none;
+}
+
+#footer .info-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer .tag-item a {
+    font-size: 13px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+#footer .info-box a:hover {
+    color: #f25454;
+    border-color: #f25454;
+}
+
+
+/*** End Footer ** /
